@@ -16,7 +16,7 @@ public class DamageByCatch : DamageBase
 
     public override void PerformDamage()
     {
-        if (Mathf.Approximately(lastDamagePerformedTime, Time.time)) // Во избежание повторного урона для объектов с несколькими коллайдерами (можно и через bool, но тогда придется делать связь со спавн менеджером и сбрасывать при каждом спавне)
+        if (Mathf.Approximately(lastDamagePerformedTime, Time.time))
             return;
 
         if (Catch.HasTargetCm)
